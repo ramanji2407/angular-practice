@@ -1,0 +1,7 @@
+<p>list-users works!</p>
+<app-filter-users [fullName]="fullName" [tax]="23" (updatedlist)="updatedUserList($event)">
+    
+</app-filter-users>
+<h1>users data</h1>
+{{user|json}}
+

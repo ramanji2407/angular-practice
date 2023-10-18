@@ -1,1 +1,156 @@
-<h1 style="color: blue;"  >Hi guys</h1>
+<!-- <h1 class="c1">Hi guys</h1>
+
+
+
+<h1>Interpolation</h1>
+<h1>{{ heading_name }}</h1>
+<h2 >{{page_count}}</h2>
+<div>{{user_object.firstName}} {{user_object.lastName}}</div>
+
+
+<div *ngIf="sucess_msg">
+
+    <div [innerHTML]="user_object.firstName" style="color: rgb(212, 23, 23);"></div>
+</div>
+
+<img [src]="imageurl" [alt]="altdata">
+<p [style.color]="txtcolor">property binding</p>
+
+<h2>attribute</h2>
+
+<table>
+
+    <tr>
+        <td>name</td>
+        <td>id</td>
+        <td>age</td>
+    </tr>
+    <tr> 
+        <td [attr.colspan]="colvalue">name</td>
+      
+        <td>age</td>
+
+    </tr>
+</table>
+
+<h1>event binding</h1>
+<label for="d1">username</label>
+<input type="text" id="d1" class="form" (input)="getUserName($event)">
+<button (click)="sayHello()">click to say hello</button>
+<div (mouseover)="sumOfNumber(1,2,3)">sumOfNumbers</div>
+
+<h2>two way databinding</h2>
+
+<input [(ngModel)]="username"/>
+<input [(ngModel)]="age"/>
+
+<br/>
+<div >{{username}}</div>
+
+<h2>pipes</h2>
+
+<div>{{ fullname|lowercase}}</div>
+<div [ngStyle]="{'color':'green'}">{{username|uppercase}}</div>
+<div>{{dateexample|date}}</div>
+<div>{{user_object|json}}</div>
+<div>{{total_cost|currency }}</div>
+<div>{{totalpercentage|percent}}</div>
+<h1>
+  parametrized pipes
+</h1>
+
+<div>{{ fullname|lowercase}}</div>
+<div [ngStyle]="{'color':'green'}">{{username|uppercase}}</div> -->
+<!-- <div>{{dateexample|date:'short'}}</div> -->
+<!-- <div>{{dateexample|date:'long'}}</div> -->
+<!-- <div>{{dateexample|date:'MMM-dd-yyyy'}}</div> -->
+
+
+
+
+<!-- <div>{{user_object|json}}</div>
+<div>{{total_cost|currency :'INR'}}</div>
+<div>{{totalpercentage|percent:'3.1-1'}}</div>
+
+<h1>chaining of pipes</h1>
+<div>{{dateexample|date|uppercase}}</div> -->
+<!--
+<div
+  style="color: aquamarine"
+  *ngIf="sucess_msg; then update_msg; else error_msg"
+>
+  Sucessfully added user
+</div>
+
+<ng-template #error_msg>user was not added</ng-template>
+<ng-template #update_msg style="color: brown">
+  user was updated sucesfully</ng-template
+>
+
+<h4 style="background-color: beige">ngFor</h4>
+
+<ul>
+  <li
+    *ngFor="
+      let contact of contacts;
+      index as i;
+      first as f;
+      last as l;
+      odd as o;
+      even as e
+    "
+  >
+   <div  *ngIf="f" style="background-color: blueviolet;">this is first record</div>
+        <div *ngIf="l" style="color: brown;">this is the last record</div>
+    <div *ngIf="o" style="background-color: rgb(215, 237, 250)">
+      {{ i }}{{ contact.firstName }}{{ contact.lastName }}
+    </div>
+    <div *ngIf="e" style="background-color: bisque">
+      {{ i }}{{ contact.firstName }}{{ contact.lastName }}
+    </div>
+  </li>
+</ul>
+
+<h4>ngSwitch</h4>
+<div [ngSwitch]="superpower">
+  <div *ngSwitchCase="'wonderwoman'">Dispalyed wonder woman data</div>
+  <div *ngSwitchCase="'superman'">Dispalyed superman data</div>
+  <div *ngSwitchCase="'he man'">Dispalyed he man data</div>
+  <div *ngSwitchDefault>Displayed default value</div>
+</div>
+<br />
+<br />
+<div [ngSwitch]="tax">
+  <div *ngSwitchCase="10">the total tax % is 10</div>
+  <div *ngSwitchCase="20">the total tax % is 20</div>
+
+  <div *ngSwitchCase="30">the total tax % is 30</div>
+
+  <div *ngSwitchCase="40">the total tax % is 40</div>
+  <div *ngSwitchDefault>the tax % is 16</div>
+</div>
+<h1>ngStyle</h1>
+<div [ngStyle]="{'background-color':'green','color':'#fff'}">ng style applied </div>
+<div [ngStyle]="{'background-color':dynamiccolor,'color':'#fff'}">dynamic color aoolied</div>
+<div [ngStyle]="{'color':txtcolor==='blue'?'blue':'green'}">conditonal opeartor wih ng style</div>
+
+<h1>ngClass</h1>
+<div [ngClass]="'c1'">ng class styling</div>
+<div [ngClass]="'c1 c2'">ng class multipe classes styling</div>
+
+<div [ngClass]="styleclass">ng class with dynamic styling</div>
+<div [ngClass]="styled=== 'c3' ? 'c3':'c4'" > conditional ng class</div>
+
+<p>ngclass object</p>
+<div [ngClass]="{c3: false ,c4: true}"> ng class object</div>
+<div [ngClass]="getClassname()">ng class styling with method return</div>
+-->
+  <!-- <label>username:</label>
+<input type="text"(input)="getUserName($event)" >
+{{username}}
+ -->
+
+
+
+<app-list-users></app-list-users>
+<router-outlet></router-outlet>

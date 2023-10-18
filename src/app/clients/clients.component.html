@@ -1,0 +1,15 @@
+<p>clients works!</p>
+<table>
+    <th>clientid</th>
+    <th>firstname</th>
+    <th>secondname</th>
+    <tr *ngFor="let client of clientlist ">
+        <td>{{client.clientid}} </td>
+        <td>{{client.firstname}}</td>
+        <td> {{client.lastname}}</td>
+        <!-- <td><a href="#">edit</a>|<a href="#">delete</a></td> -->
+        <!-- <td><a [routerLink]="'/delete'">delete</a>|<a [routerLink]="'/edit'" >edit</a></td> -->
+        <td><a [routerLink]="['/delete',client.clientid]">delete</a>|<a [routerLink]="['/edit',client.clientid]" >edit</a></td>
+
+    </tr>
+</table>

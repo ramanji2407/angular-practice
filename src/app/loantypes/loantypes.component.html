@@ -1,0 +1,72 @@
+<p>loantypes works!</p>
+<form [formGroup]="addLoanTypeForms">
+  <div class="form-group">
+    <label for="">Loan Name</label>
+    <input type="text" formControlName="loanName" />
+    <br />
+    <br />
+  </div>
+  <div
+    *ngIf="
+      addLoanTypeForms.get('loanName')?.hasError('required') &&
+      addLoanTypeForms.get('loanName')?.touched
+    "
+  >
+    Loan type is mandatory
+  </div>
+  <div
+    *ngIf="
+      addLoanTypeForms.get('loanName')?.hasError('minlength') &&
+      addLoanTypeForms.get('loanName')?.touched
+    "
+  >
+    Loan type mimimum length
+  </div>
+
+  <div class="form-group">
+    <label for="">Loandescription</label>
+
+    <textarea
+      name="loanDescription"
+      cols="30"
+      rows="10"
+      formControlName="loanDescription"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label>loanpercentage</label>
+    <input type="text" formControlName="intrestrate" />
+  </div>
+
+  <!-- <div formArrayName="users">
+    <label >skills</label>
+<div *ngFor="let control of addLoanTypeForms.get('users')?.value;let i=index ">
+
+<input type="text" [formControlName]="i">
+
+</div>
+
+<button (click)="addSkill()"> +add</button>
+<button (click)="delete()"> +add</button>
+
+  </div> -->
+
+  <div formArrayName="users">
+
+    <div *ngFor="let user of controls;let i=index  " [formGroupName]="i">
+
+     <label for="">name:</label> <input type="text" formControlName="name">
+     <label for="">age</label> <input type="text" formControlName="age">
+     <button (click)="delete(i)">Delete</button>
+
+    </div>
+    <button (click)="addSkill()"> +add</button>
+  </div>
+
+  
+  <button (click)="resetForm()">Reset</button>
+
+  <button (click)="addLoanDetails()" [disabled]="addLoanTypeForms.invalid">
+    Details
+  </button>
+</form>

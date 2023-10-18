@@ -1,0 +1,37 @@
+<h1>customers!</h1>
+
+<form #addcustomerform="ngForm" >
+
+<label for="name">Name:</label>
+    <input id="name" type="text" [(ngModel)]="firstName" name="firstName"  required minlength="5">
+    
+    <br/>
+    <br/>
+    {{firstName}}
+<label for="type">Customertype:</label>
+    <select id="type" name="customertype" [(ngModel)]="customertype" required>
+    <option  value="1">regular</option>
+    <option value="2" >standard</option>
+  </select>
+  <br/>
+  <br/>
+  <label >seniocitizen:</label>
+  <input type="radio" name="type" value="seniocitizen"  class="radio" [(ngModel)]="type"  required>
+  <br/>
+  <label for="">adult    :</label>
+  <input type="radio" name="type" value="adult" class="radio" [(ngModel)]="type" required>
+  <br/>
+    <textarea name="description"  cols="30" rows="10" [(ngModel)]="description"></textarea>
+    
+    <br/>
+    
+    <br/>
+    <input type="checkbox" name="terms" [(ngModel)]="terms" required >accept terms and conditon
+    <br/>
+    <br/> 
+    <button (click)="addcustomer(addcustomerform)" [disabled]="addcustomerform.invalid">Submit details</button>
+    <br/>
+    <br/>
+    <button  (click)="resetForm(addcustomerform)" >reset</button>
+    <button (click)="setformValues(addcustomerform)">set</button>
+</form>
